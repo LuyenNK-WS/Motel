@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBlue300">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="10dp"
+                android:text="Đăng ký"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:hint="Tên đăng nhập"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/edtPassWord"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Mật khẩu"
+            android:inputType="numberPassword" />
+
+        <EditText
+            android:id="@+id/edtReviewPassWord"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="numberPassword" />
+
+        <EditText
+            android:id="@+id/edtNameUseCreate"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:hint="Họ tên"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Địa chỉ"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/edtIDCard"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="CMND"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Số điện thoại"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/edtJob"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Nghề nghiệp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/edtMail"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:hint="Mail"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/btnRegisterUser"
+            android:layout_width="300dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="Đăng ký"
+            android:textSize="30sp"
+            android:background="@drawable/bg_curved_stroke_green"/>
+
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

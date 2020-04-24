@@ -1,0 +1,72 @@
+<resources>
+
+    <string name="app_name">Motel service</string>
+    <string name="motel">Motel</string>
+    <string name="login">Đăng nhập</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="enter_the_information">Enter the information in the box below</string>
+
+    <string name="bill">Hóa đơn</string>
+    <string name="bill_detail">Chi tiết hóa đơn</string>
+    <string name="contract">Hợp đồng</string>
+    <string name="customer">Khách hàng</string>
+    <string name="room">Phòng</string>
+    <string name="notification">Thông báo</string>
+    <string name="service">Dịch vụ</string>
+    <string name="home">Home</string>
+    <string name="setting">Cài đặt</string>
+    <string name="account">Tài khoản</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="edit">Sửa</string>
+    <string name="electric">Giá điện</string>
+    <string name="water">Giá nước</string>
+    <string name="name_room_default">Phòng : P101</string>
+    <string name="total_price_default">1.000.000 VND</string>
+
+    <string name="add_contract">Thêm hợp đồng</string>
+
+    <string name="luat_nha_nuoc">- Căn cứ Bộ luật Dân sự số 91/2015/QH13 ngày 24/11/2015\n
+- Căn cứ vào Luật Thương mại số 36/2005/QH11 ngày 14 tháng 06 năm 2005\n
+- Căn cứ vào nhu cầu và sự thỏa thuận của các bên tham gia hợp đồng</string>
+
+    <string name="about_management">BÊN CHO THUÊ (Bên A): Nguyễn văn Minh\nCMND số:145817567\nCơ quan cấp: CA-Hà Nội Ngày cấp:13/03/1964\nNơi ĐKTT:Minh Khai - Bắc Từ Liêm - Hà Nội</string>
+    
+    <string name="rules">Bên A và Bên B sau đây gọi chung là “Hai Bên” hoặc “Các Bên”.\n
+        Sau khi thảo luận, Hai Bên thống nhất đi đến ký kết\n
+        Hợp đồng thuê nhà (“Hợp Đồng”) với các điều khoản và điều\n
+        kiện dưới đây:\n
+        Điều 1. Nhà ở và các tài sản cho thuê kèm theo phòng ở:\n
+         1.1. Bên A đồng ý cho Bên B thuê và Bên B cũng đồng ý thuê\n
+           quyền sử dụng phòng trọ làm nơi để ở.Diện tích :20m2\n
+        Điều 2. Bàn giao và sử dụng diện tích thuê:\n
+         2.1. Thời điểm Bên A bàn giao Tài sản thuê vào</string>
+    <string name="rules_2">2.2. Bên B được toàn quyền sử dụng Tài sản thuê kể từ thời\n
+            điểm được Bên A bàn giao như quy định tại Mục 2.1 trên đây.\n
+        Điều 3. Thời hạn thuê\n
+         3.1. Bên A cam kết cho Bên B thuê Tài sản thuê với thời hạn\n
+            là 1 năm kể từ ngày bàn giao Tài sản thuê\n
+         3.2. Hết thời hạn thuê nêu trên nếu bên B có nhu cầu tiếp tục\n
+            sử dụng thì Bên A phải ưu tiên cho Bên B tiếp tục thuê.\n
+         Điều 4. Đặc cọc tiền thuê nhà</string>
+
+    <string name="about_app">Phần mềm do Nguyễn Khắc Luyện. Sinh viên trường Đại học Công Nghiệp Hà Nội lập trình.\n Phần mềm là một đề tài được sinh viên làm thành đồ án tốt nghiệp.
+        Phần mềm này hỗ trợ cho người chủ nhà có nhà trọ cho thuê tính toán và quản lý các hoạt động trong linh vực kinh doanh nhà trọ.Phần mềm giúp cho người quản lý nhà trọ:\n
+-	Hạn chế việc phải tính toán dễ gây sai sót.\n
+-	Tạo hợp đồng và hóa đơn một cách nhanh chóng, trên chính thiêt bị di động của mình.\n
+-	Có thể lưu trữ lại dữ liệu của hàng tháng mà không phải trên giấy tờ, tránh được việc mất mát dữ liệu.\n
+-	Thống kê và so sánh được mức thu nhập hàng tháng.\n
+-	Dễ dàng quản lý việc kinh doanh của mình.\n
+-	Dễ dàng đưa ra thông báo nhanh với tất cả thành viên trong xóm trọ.\n
+Về phía người thuê :\n
+-	Giúp người thuê có thể dễ dàng theo dõi được số tiền phải trả của mỗi tháng.\n
+-	Nhanh chóng nhận được các thông báo từ phía chủ nhà.\n\n\n\n
+</string>
+    
+    <string-array name="spinner_peermission">
+        <item>Chọn quyền truy cập</item>
+        <item>Chủ nhà</item>
+        <item>Khách trọ</item>
+        <item>Danh sách đen</item>
+    </string-array>
+</resources>

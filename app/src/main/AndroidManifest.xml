@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.luyennk.motel">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity_Management.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_Management.LoginActivity"/>
+        <activity android:name=".Activity_Management.ButtomNavigationHomeManagement"/>
+        <activity android:name=".Activity_Management.BillActivity"/>
+        <activity android:name=".Activity_Management.ContractActivity"/>
+        <activity android:name=".Activity_Management.CustomerActivity"/>
+        <activity android:name=".Activity_Management.ServiceActivity"/>
+        <activity android:name=".Activity_Management.NotificationActivity"/>
+        <activity android:name=".Activity_Management.RegisterActivity"/>
+        <activity android:name=".Activity_Management.RoomActivity"/>
+        <activity android:name=".Activity_Management.UpdatePriceElectricActivity"/>
+        <activity android:name=".Activity_Management.UpdatePriceWaterActivity"/>
+        <activity android:name=".Activity_Management.AddRoomActivity"/>
+        <activity android:name=".Activity_Management.AddContractActivity"/>
+        <activity android:name=".Dialog.AddServiceDialog"/>
+        <activity android:name=".Activity_Management.EditAccountActivity"/>
+        <activity android:name=".Activity_Management.ChartActivity"/>
+
+
+        <activity android:name=".Activity_Customer.ButtomNavigationHomeCustomer"/>
+        <activity android:name=".Activity_Customer.BillCustomerActivity"/>
+        <activity android:name=".Activity_Customer.ContractCustomerActivity"/>
+        <activity android:name=".Activity_Customer.ServiceCustomerActivity"/>
+        <activity android:name=".Activity_Customer.RoomCustomerActivity"/>
+        <activity android:name=".Activity_Customer.PriceElectricCustomerActivity"/>
+        <activity android:name=".Activity_Customer.PriceWaterCustomerActivity"/>
+    </application>
+</manifest>

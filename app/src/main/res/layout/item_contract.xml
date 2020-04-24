@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemContract"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_cruved_strock_green1"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="20">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="18"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtIDRoom"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phòng: P101"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtNameCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Người đứng tên: Nguyễn Khắc Luyện"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtDeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hạn hợp đồng: 19/10/2020"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:background="@drawable/bg_no_stroke_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"/>
+    </LinearLayout>
+</LinearLayout>

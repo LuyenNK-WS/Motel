@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/itemRoom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@drawable/bg_cruved_strock_green1">
+
+    <TextView
+        android:id="@+id/txtNameRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên phòng: P101"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/txtPriceRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá phòng: 2.000.000 vnd"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tình trạng: trống"
+        android:textSize="17sp"/>
+
+</LinearLayout>

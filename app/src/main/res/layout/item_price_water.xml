@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/itemPriceWater"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:background="@drawable/bg_cruved_strock_green1">
+
+    <TextView
+        android:id="@+id/txtTopLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hạn mức đầu: 0"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/txtLowerLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hạn mức cuối: 50"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/txtPriceWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá nước: 12.500 vnd/khối"
+        android:textSize="20sp"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+</LinearLayout>

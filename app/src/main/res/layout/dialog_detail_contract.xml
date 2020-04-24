@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_cruved_strock_green1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Chi tiết Hợp đồng"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtIDRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Phòng: P101"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtNameUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Người thuê: Nguyễn Khắc Luyện"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtNumberPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Người ở cùng"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtPersonLiveWith"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dịch vụ đi kèm"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtNameService"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/txtDateOfCheckIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ngày lập: 20-02-2020"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtDateOfCheckOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ngày hết hạn: 20-02-2021"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtPriceRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Giá phòng: 2500000 vnd"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:text="Xong"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp" />
+
+</LinearLayout>

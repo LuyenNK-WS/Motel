@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1081236606489",
+    "firebase_url": "https://motel-cdf85.firebaseio.com",
+    "project_id": "motel-cdf85",
+    "storage_bucket": "motel-cdf85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081236606489:android:d649cd7b8badfb2d9ce488",
+        "android_client_info": {
+          "package_name": "com.luyennk.motel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081236606489-626posc42fi41ee826a975te40ugak6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luyennk.motel",
+            "certificate_hash": "516572f6f2f6630eb12884cf3a5324382315a10c"
+          }
+        },
+        {
+          "client_id": "1081236606489-oltejgc07rkvokv64lmjmh36vhc9uto5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfbzVCbFqYjfh-R04a1ew3ZwR3Cb6DK7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081236606489-oltejgc07rkvokv64lmjmh36vhc9uto5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chi tiết hóa đơn"
+        android:textSize="25sp"
+        android:textColor="@color/colorAccent"
+        style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Dịch vụ" />
+
+    <TextView
+        android:id="@+id/txtNameAndPriceService"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Mạng : 100.000 vnd\nRác : 100.000 vnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtNumberElectricLast"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Số điện tháng trước: 3678"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtNumberWaterLast"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Số nước tháng trước: 3678"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtNumberElectricNow"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Số điện tháng này: 3678"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtNumberWaterNow"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Số nước tháng này: 3678"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Tổng tiền: 2.680.000 vnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtPay"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Đã thanh toán: 2.680.000 vnd"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtLiability"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Còn nợ: 0 vnd"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xong"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGreen300"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

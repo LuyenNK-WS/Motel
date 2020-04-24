@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm người ở cùng"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edtFullName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:hint="Họ tên"
+        android:inputType="text" />
+
+
+    <EditText
+        android:id="@+id/edtIdCard"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Số CMT/Thẻ căn cước"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Số điện thoại"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtJob"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:hint="Nghề nghiệp"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_cruved_strock_green1"
+            android:text="Thêm"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlue300"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/bg_cruved_strock_green1"
+            android:text="Xong"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp" />
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/bg_cruved_strock_green1"
+            android:text="Hủy"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Danh sách người ở cùng" />
+    <TextView
+        android:id="@+id/txtNamePerson"
+        android:layout_width="300dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="25sp"
+        style="@style/TextAppearance.AppCompat.Large"/>
+
+</LinearLayout>

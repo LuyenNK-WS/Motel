@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemCustomer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_cruved_strock_green1"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:weightSum="15">
+
+
+    <LinearLayout
+        android:layout_weight="14.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtFullName"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ tên: Nguyễn Khắc Luyện"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quê quán: Hưng Yên"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtNameRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phòng: P101"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnMenu"
+        android:layout_weight="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_more"/>
+
+
+</LinearLayout>
