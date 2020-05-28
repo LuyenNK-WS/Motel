@@ -17,7 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.luyennk.motel.Activity_Management.ButtomNavigationHomeManagement;
+import com.luyennk.motel.Activity_Management.ButtonNavigationHomeManagement;
 import com.luyennk.motel.DTOs.Service;
 import com.luyennk.motel.R;
 
@@ -57,7 +57,7 @@ public class AddServiceDialog extends Dialog {
             @Override
             public void onClick(View v) {
                 addService();
-                Intent intent=new Intent(getContext(), ButtomNavigationHomeManagement.class);
+                Intent intent=new Intent(getContext(), ButtonNavigationHomeManagement.class);
                 startActivity(getContext(),intent,null);
 
                 Toast.makeText(getContext(),"Thêm dịch vụ thành công",Toast.LENGTH_LONG).show();

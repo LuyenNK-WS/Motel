@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -14,15 +13,14 @@ import com.google.android.material.navigation.NavigationView;
 import com.luyennk.motel.FragmentManagement.AccountFragment;
 import com.luyennk.motel.FragmentManagement.ElectricWaterFragment;
 import com.luyennk.motel.FragmentManagement.HomeFragment;
-import com.luyennk.motel.FragmentManagement.NotificationAppFragment;
 import com.luyennk.motel.R;
 
-public class ButtomNavigationHomeManagement extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
+public class ButtonNavigationHomeManagement extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_home_management);
         initView();
@@ -44,7 +42,7 @@ public class ButtomNavigationHomeManagement extends AppCompatActivity implements
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Fragment fragment=null;
+        Fragment fragment;
 
         switch (menuItem.getItemId()){
             case R.id.nav_Home:
@@ -55,9 +53,6 @@ public class ButtomNavigationHomeManagement extends AppCompatActivity implements
                 break;
             case R.id.nav_Account:
                 fragment=new AccountFragment();
-                break;
-            case R.id.nav_Notification_App:
-                fragment=new NotificationAppFragment();
                 break;
             default:
                 return false;

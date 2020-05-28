@@ -7,9 +7,14 @@
     <color name="colorGreen300">#89D81B</color>
 
     <color name="colorBlue300">#1B86D8</color>
+    <color name="colorBlue400">#0DC9E1</color>
 
     <color name="colorWhite200">#FFFFFF</color>
     <color name="colorWhite500">#A5A5A5</color>
 
     <color name="colorBlack">#000000</color>
+
+    <color name="colorRed">#F30202</color>
+    <color name="colorWhite505">#757575</color>
+
 </resources>

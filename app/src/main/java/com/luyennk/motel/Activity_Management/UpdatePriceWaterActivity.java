@@ -68,7 +68,7 @@ public class UpdatePriceWaterActivity extends Activity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnBack:
-                Intent intent=new Intent(this, ButtomNavigationHomeManagement.class);
+                Intent intent=new Intent(this, ButtonNavigationHomeManagement.class);
                 startActivity(intent);
                 finish();
                 break;

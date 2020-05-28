@@ -45,7 +45,6 @@ public class AddRoomActivity extends Activity implements View.OnClickListener {
         edtNameRoom=findViewById(R.id.edtNameRoom);
         edtPriceRoom=findViewById(R.id.edtPriceRoom);
         edtStatus=findViewById(R.id.edtStatus);
-
         btnBack.setOnClickListener(this);
         btnCreateRoom.setOnClickListener(this);
     }

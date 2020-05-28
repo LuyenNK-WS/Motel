@@ -22,6 +22,8 @@ import com.luyennk.motel.Dialog.DetailBillDialog;
 import com.luyennk.motel.R;
 
 import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,13 +49,19 @@ public class AdapterBill extends RecyclerView.Adapter<AdapterBill.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        String dateFormat = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            dateFormat = LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE);
+        }
+        String year = dateFormat.substring(0, 4);
+        String month = dateFormat.substring(4, 6);
         final List<BillDetail> billDetails=new ArrayList<>();
         final Bill bill=billList.get(position);
 
         holder.txtIDRoom.setText("Phòng: "+bill.getIdRoom());
         holder.txtDate.setText("Ngày chốt: "+bill.getBillDate());
 
-        DatabaseReference mData= FirebaseDatabase.getInstance().getReference().child("BillDetail");
+        DatabaseReference mData= FirebaseDatabase.getInstance().getReference("BillDetail").child(year+"/"+month);
         mData.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

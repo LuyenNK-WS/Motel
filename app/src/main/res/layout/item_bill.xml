@@ -1,49 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/itemBill"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemBill"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_margin="8dp"
-    android:background="@drawable/bg_rectangular_black">
+    android:background="@drawable/bg_cruved_strock_green1"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txtNameRoom"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="23dp"
+            style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="23dp"
             android:text="@string/name_room_default"
-            style="@style/TextAppearance.AppCompat.Large"
             android:textSize="25sp"
             tools:ignore="RtlHardcoded" />
 
         <TextView
             android:id="@+id/txtTotal"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="23dp"
+            style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="23dp"
             android:text="@string/total_price_default"
-            style="@style/TextAppearance.AppCompat.Large"
             android:textSize="25sp"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:id="@+id/txtDate"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ngày chốt: 19/20/2019"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:text="Ngày chốt: 19/20/2019"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/txtPay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="3"
+            android:text="Đã thanh toán"/>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </LinearLayout>

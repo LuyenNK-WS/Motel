@@ -32,14 +32,10 @@ public class EditCustomerDialog extends Dialog implements AdapterView.OnItemSele
 
     public EditCustomerDialog(@NonNull Context context,Use use,String id) {
         super(context);
-
         setCancelable(false);
         setCanceledOnTouchOutside(false);
-
         setContentView(R.layout.dialog_edit_customer);
-
         initView(use,id);
-
         pushDataInSpinner();
     }
 
@@ -91,13 +87,11 @@ public class EditCustomerDialog extends Dialog implements AdapterView.OnItemSele
 
     private void updateCustomer(Use use,String id){
         Map<String,Object> childUpdate=new HashMap<>();
-
         //Thêm object cần update
         Use useUpdate=new Use(id,use.getFullName(),use.getPassWord(),use.getNameUse(),use.getAddress(),
                 use.getIdCard(),use.getPhoneNumber(),use.getJob(),use.getMail(),permission);
 
         childUpdate.put("User/"+id,useUpdate);
-
         //Cập nhật lại DB
         FirebaseDatabase.getInstance().getReference().updateChildren(childUpdate);
     }

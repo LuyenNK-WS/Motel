@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.luyennk.motel.Activity_Management.ButtomNavigationHomeManagement;
+import com.luyennk.motel.Activity_Management.ButtonNavigationHomeManagement;
 import com.luyennk.motel.DTOs.UpdatePriceElectric;
 import com.luyennk.motel.R;
 
@@ -57,7 +57,7 @@ public class AddPriceElectricDialog extends Dialog {
             @Override
             public void onClick(View v) {
                 addPriceElectric();
-                Intent intent=new Intent(getContext(), ButtomNavigationHomeManagement.class);
+                Intent intent=new Intent(getContext(), ButtonNavigationHomeManagement.class);
                 startActivity(getContext(),intent,null);
 
                 Toast.makeText(getContext(),"Thêm hạn mức giá điện thành công",Toast.LENGTH_LONG).show();

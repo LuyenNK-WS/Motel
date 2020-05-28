@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chi tiết khách trọ"
+        android:textSize="25sp"
+        android:textColor="@color/colorAccent"
+        style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Họ tên" />
+
+    <TextView
+        android:id="@+id/txtFullName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Nguyễn Khắc Luyện"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Địa chỉ" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="Hưng Yên"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Email" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="nguyenkhacluyen98@gmail.com"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:text="Số điện thoại" />
+
+    <TextView
+        android:id="@+id/txtPhoneNumber"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:padding="8dp"
+        android:text="0362029955"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xong"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGreen300"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

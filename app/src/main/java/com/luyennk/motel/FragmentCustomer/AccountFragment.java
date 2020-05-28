@@ -1,9 +1,12 @@
 package com.luyennk.motel.FragmentCustomer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -13,10 +16,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.luyennk.motel.Dialog.MenuAccountDialog;
+import com.luyennk.motel.Activity_Management.EditAccountActivity;
+import com.luyennk.motel.Activity_Management.LoginActivity;
 import com.luyennk.motel.R;
 
-public class AccountFragment extends Fragment implements View.OnClickListener {
+public class AccountFragment extends Fragment{
 
     private static final String TAG="AccountFragment";
 
@@ -51,17 +55,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
 
         btnMenu = getView().findViewById(R.id.btnMenu);
 
-        btnMenu.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnMenu:
-                MenuAccountDialog dialog=new MenuAccountDialog(getActivity());
-                dialog.show();
-                break;
-        }
+        registerForContextMenu(btnMenu);
     }
 
     private void getDataInPreferences(){
@@ -74,5 +68,25 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
         txtFullName.setText(fullName);
         txtPhoneNumber.setText(phoneNumber);
         txtEmail.setText(mail);
+    }
+
+    @Override
+    public void onCreateContextMenu(@NonNull ContextMenu menu, @NonNull View v, @Nullable ContextMenu.ContextMenuInfo menuInfo) {
+        getActivity().getMenuInflater().inflate(R.menu.menu_item_account,menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mnuLogout:
+                Intent intent=new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.mnuEditAccount:
+                Intent intent1=new Intent(getContext(), EditAccountActivity.class);
+                startActivity(intent1);
+                break;
+        }
+        return super.onContextItemSelected(item);
     }
 }

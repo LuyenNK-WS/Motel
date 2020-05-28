@@ -49,7 +49,7 @@ public class PriceWaterCustomerActivity extends Activity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnBack:
-                Intent intent=new Intent(this,ButtomNavigationHomeCustomer.class);
+                Intent intent=new Intent(this, ButtonNavigationHomeCustomer.class);
                 startActivity(intent);
                 break;
         }

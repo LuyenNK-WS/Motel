@@ -56,10 +56,10 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        initview();
+        initView();
     }
 
-    private void initview() {
+    private void initView() {
         edtUserName = findViewById(R.id.edtUserName);
         edtPassword = findViewById(R.id.edtPassWord);
         edtReviewPassword = findViewById(R.id.edtReviewPassWord);
@@ -71,16 +71,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         edtMail = findViewById(R.id.edtMail);
         btnRegisterUser = findViewById(R.id.btnRegisterUser);
         btnBack = findViewById(R.id.btnBack);
-
-//        edtUserName.setOnClickListener(this);
-//        edtPassword.setOnClickListener(this);
-//        edtReviewPassword.setOnClickListener(this);
-//        edtFullName.setOnClickListener(this);
-//        edtAddress.setOnClickListener(this);
-//        edtIDCard.setOnClickListener(this);
-//        edtPhoneNumber.setOnClickListener(this);
-//        edtJob.setOnClickListener(this);
-//        edtMail.setOnClickListener(this);
         btnRegisterUser.setOnClickListener(this);
         btnBack.setOnClickListener(this);
 
@@ -95,14 +85,12 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
             date1 = LocalDate.now();
         }
         final String dateFormat = date1.format(DateTimeFormatter.BASIC_ISO_DATE);
-
         if (edtUserName.getText().toString().equals("") || edtFullName.getText().toString().equals("") ||
                 edtPassword.getText().toString().equals("") || edtUserName.getText().toString().equals("") ||
                 edtAddress.getText().toString().equals("") || edtIDCard.getText().toString().equals("") ||
                 edtPhoneNumber.getText().toString().equals("") || edtJob.getText().toString().equals("") ||
                 edtMail.getText().toString().equals("")) {
             Toast.makeText(this, "Bạn cần nhập đủ thông tin", Toast.LENGTH_SHORT).show();
-
         } else {
             if (edtPassword.getText().toString().equals(edtReviewPassword.getText().toString())) {
                 mDatabase = FirebaseDatabase.getInstance().getReference("User");
@@ -131,10 +119,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
                 } else {
                     Toast.makeText(RegisterActivity.this, "Tài khoản này đã tồn tại, Yêu cầu người dùng sử dụng tài khoản khác!", Toast.LENGTH_SHORT).show();
                 }
-
-
             } else {
-                Toast.makeText(this, "Mật khẩu không giống nhau , nhập lại mật khẩu", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Mật khẩu không đúng, nhập lại mật khẩu", Toast.LENGTH_SHORT).show();
             }
         }
     }

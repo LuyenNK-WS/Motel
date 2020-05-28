@@ -61,7 +61,6 @@ public class AdapterService extends RecyclerView.Adapter<AdapterService.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtIDService;
         private TextView txtNameService;
         private TextView txtPriceService;
         private LinearLayout item;

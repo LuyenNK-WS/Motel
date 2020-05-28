@@ -49,12 +49,12 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-        initview();
+        initView();
 
         getData();
     }
 
-    private void initview(){
+    private void initView(){
         btnBack=findViewById(R.id.btnBack);
         btnAdd=findViewById(R.id.btnAdd);
         rvService=findViewById(R.id.rvService);
@@ -70,7 +70,7 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnBack:
-                Intent intent = new Intent(ServiceActivity.this, ButtomNavigationHomeManagement.class);
+                Intent intent = new Intent(ServiceActivity.this, ButtonNavigationHomeManagement.class);
                 startActivity(intent);
                 finish();
                 break;

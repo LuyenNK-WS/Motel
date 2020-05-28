@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity_Management.LoginActivity"/>
-        <activity android:name=".Activity_Management.ButtomNavigationHomeManagement"/>
+        <activity android:name=".Activity_Management.ButtonNavigationHomeManagement"/>
         <activity android:name=".Activity_Management.BillActivity"/>
         <activity android:name=".Activity_Management.ContractActivity"/>
         <activity android:name=".Activity_Management.CustomerActivity"/>
@@ -39,8 +39,7 @@
         <activity android:name=".Activity_Management.EditAccountActivity"/>
         <activity android:name=".Activity_Management.ChartActivity"/>
 
-
-        <activity android:name=".Activity_Customer.ButtomNavigationHomeCustomer"/>
+        <activity android:name=".Activity_Customer.ButtonNavigationHomeCustomer"/>
         <activity android:name=".Activity_Customer.BillCustomerActivity"/>
         <activity android:name=".Activity_Customer.ContractCustomerActivity"/>
         <activity android:name=".Activity_Customer.ServiceCustomerActivity"/>

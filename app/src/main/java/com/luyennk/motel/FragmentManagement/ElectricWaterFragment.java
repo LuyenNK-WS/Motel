@@ -159,7 +159,8 @@ public class ElectricWaterFragment extends Fragment implements View.OnClickListe
         }
 
         final String date = dateFormat.substring(6) + "/" + dateFormat.substring(4, 6) + "/" + dateFormat.substring(0, 4);
-
+        final String year = dateFormat.substring(0, 4);
+        final String month = dateFormat.substring(4, 6);
         Log.d(TAG, date);
 
         DatabaseReference mDataBill = FirebaseDatabase.getInstance().getReference().child("Bill");
@@ -171,7 +172,6 @@ public class ElectricWaterFragment extends Fragment implements View.OnClickListe
             DatabaseReference mDataContract = FirebaseDatabase.getInstance().getReference().child("Contract");
 
             final String finalDateFormat = dateFormat;
-
             mDataContract.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -209,7 +209,7 @@ public class ElectricWaterFragment extends Fragment implements View.OnClickListe
 
                     //create Bill Detail
                     DatabaseReference mDataDetailBill = FirebaseDatabase.getInstance().getReference().child("BillDetail");
-                    mDataDetailBill.child(idRoom + finalDateFormat).setValue(new BillDetail(idRoom + finalDateFormat,
+                    mDataDetailBill.child(year +"/"+month+"/"+idRoom + finalDateFormat).setValue(new BillDetail(idRoom + finalDateFormat,
                             serviceList,electricLast,waterLast, Integer.parseInt(electricWater.getNumberElectric()),
                             Integer.parseInt(electricWater.getNumberWater()), total, total, 0.0));
                 }

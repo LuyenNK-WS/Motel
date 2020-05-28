@@ -35,15 +35,6 @@
                 android:textSize="25sp"
                 style="@style/TextAppearance.AppCompat.Large"/>
 
-            <SearchView
-                android:id="@+id/btnSearch"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="2dp"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

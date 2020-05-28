@@ -16,18 +16,22 @@
 
     <TextView
         android:id="@+id/txtIDRoom"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Phòng: P101"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:paddingLeft="8dp"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/txtNameUser"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Người thuê: Nguyễn Khắc Luyện"
+        android:text="Nguyễn Khắc Luyện"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:paddingLeft="8dp"
         android:textSize="25sp" />
 
     <TextView
@@ -36,7 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Người ở cùng"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_marginLeft="28dp"
+        android:layout_gravity="left"/>
 
     <TextView
         android:id="@+id/txtPersonLiveWith"
@@ -51,7 +57,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Dịch vụ đi kèm"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:layout_marginLeft="28dp"
+        android:layout_gravity="left"/>
 
     <TextView
         android:id="@+id/txtNameService"
@@ -63,26 +71,32 @@
 
     <TextView
         android:id="@+id/txtDateOfCheckIn"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Ngày lập: 20-02-2020"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:paddingLeft="8dp"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/txtDateOfCheckOut"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Ngày hết hạn: 20-02-2021"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:paddingLeft="8dp"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/txtPriceRoom"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Giá phòng: 2500000 vnd"
+        android:background="@drawable/bg_cruved_strock_green1"
+        android:paddingLeft="8dp"
         android:textSize="25sp" />
 
     <Button

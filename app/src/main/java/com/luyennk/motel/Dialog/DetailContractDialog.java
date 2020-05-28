@@ -37,8 +37,10 @@ public class DetailContractDialog extends Dialog {
         txtIDRoom.setText("Phòng: "+idRoom);
         txtNameUser.setText("KH: "+nameUser);
         String person="";
-        for (Person item: personList){
-            person+=item.getFullName()+"\n";
+        if (personList.size() != 0) {
+            for (Person item : personList) {
+                person += item.getFullName() + "\n";
+            }
         }
         txtPersonWithLive.setText(person);
 

@@ -35,7 +35,7 @@
             android:id="@+id/txtNameRoom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phòng: P101"
+            android:text=""
             android:textSize="20sp" />
     </LinearLayout>
 

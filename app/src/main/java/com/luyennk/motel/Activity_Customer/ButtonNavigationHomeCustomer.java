@@ -15,7 +15,7 @@ import com.luyennk.motel.FragmentCustomer.HomeFragment;
 import com.luyennk.motel.FragmentManagement.NotificationAppFragment;
 import com.luyennk.motel.R;
 
-public class ButtomNavigationHomeCustomer extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class ButtonNavigationHomeCustomer extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
 
     @Override

@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,7 +28,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.luyennk.motel.Activity_Customer.ButtomNavigationHomeCustomer;
+import com.luyennk.motel.Activity_Customer.ButtonNavigationHomeCustomer;
 import com.luyennk.motel.DTOs.Use;
 import com.luyennk.motel.R;
 
@@ -44,6 +45,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private int INTERNET_PERMISSION_CODE = 1;
 
     private String nameFile = "HoaDonPhong.txt";
+    ProgressDialog dialog=null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
 
         initView();
+        dialog = new ProgressDialog(this);
     }
 
     private void initView() {
@@ -95,58 +98,60 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     }
 
     private void checkLogin() {
-
         final ArrayList<Use> uses = new ArrayList<>();
 
-        DatabaseReference all = FirebaseDatabase.getInstance().getReference().child("User");
+        if (edtUserName.getText().toString().equals("") || edtPassWord.getText().toString().equals("")) {
+            Toast.makeText(LoginActivity.this, "Cần nhập đủ UserName, Password", Toast.LENGTH_LONG).show();
+        } else {
+            DatabaseReference all = FirebaseDatabase.getInstance().getReference().child("User");
+            showProgressDialog();
+            all.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    for (DataSnapshot item : dataSnapshot.getChildren()) {
+                        Use use = item.getValue(Use.class);
+                        uses.add(use);
+                    }
 
-        all.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot item : dataSnapshot.getChildren()) {
-                    Use use = item.getValue(Use.class);
-                    uses.add(use);
-                }
-
-                //check login
-                int i=0;
-                for (Use item : uses) {
-                    if (item.getNameUse().equals(edtUserName.getText().toString()) == true) {
-                        if (item.getPassWord().equals(edtPassWord.getText().toString()) == true) {
-                            if (item.getPermission().equals("1") == true) {
-                                createSharedPreferences(item.getId(), item.getFullName(), item.getPassWord(), item.getNameUse(), item.getAddress(),
-                                        item.getIdCard(), item.getPhoneNumber(), item.getJob(), item.getMail(), item.getPermission());
-                                Intent intent = new Intent(LoginActivity.this, ButtomNavigationHomeManagement.class);
-                                startActivity(intent);
-                                i++;
-                                finish();
-                            }else if (item.getPermission().equals("0") == true){
-                                createSharedPreferences(item.getId(), item.getFullName(), item.getPassWord(), item.getNameUse(), item.getAddress(),
-                                        item.getIdCard(), item.getPhoneNumber(), item.getJob(), item.getMail(), item.getPermission());
-                                Intent intent = new Intent(LoginActivity.this, ButtomNavigationHomeCustomer.class);
-                                startActivity(intent);
-                                i++;
-                                finish();
-                            }else {
-                                Toast.makeText(LoginActivity.this,"Tài khaorn của bạn dã bị khóa, Yêu cầu gặp chủ nhà để mở khóa tài khoản",Toast.LENGTH_LONG).show();
-                                break;
+                    //check login
+                    int i = 0;
+                    for (Use item : uses) {
+                        if (item.getNameUse().equals(edtUserName.getText().toString())) {
+                            if (item.getPassWord().equals(edtPassWord.getText().toString())) {
+                                if (item.getPermission().equals("1")) {
+                                    createSharedPreferences(item.getId(), item.getFullName(), item.getPassWord(), item.getNameUse(), item.getAddress(),
+                                            item.getIdCard(), item.getPhoneNumber(), item.getJob(), item.getMail(), item.getPermission());
+                                    Intent intent = new Intent(LoginActivity.this, ButtonNavigationHomeManagement.class);
+                                    dialog.dismiss();
+                                    startActivity(intent);
+                                    i++;
+                                    finish();
+                                } else if (item.getPermission().equals("0")) {
+                                    createSharedPreferences(item.getId(), item.getFullName(), item.getPassWord(), item.getNameUse(), item.getAddress(),
+                                            item.getIdCard(), item.getPhoneNumber(), item.getJob(), item.getMail(), item.getPermission());
+                                    Intent intent = new Intent(LoginActivity.this, ButtonNavigationHomeCustomer.class);
+                                    dialog.dismiss();
+                                    startActivity(intent);
+                                    i++;
+                                    finish();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "Tài khaorn của bạn đã bị khóa, Yêu cầu gặp chủ nhà để mở khóa tài khoản", Toast.LENGTH_LONG).show();
+                                    break;
+                                }
                             }
                         }
                     }
+                    if (i == 0) {
+                        Toast.makeText(LoginActivity.this, "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_LONG).show();
+                    }
                 }
 
-                if (i==0){
-                    Toast.makeText(LoginActivity.this,"Tài khoản hoặc mật khẩu không đúng",Toast.LENGTH_LONG).show();
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
                 }
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+            });
+        }
     }
 
     private void requestStoragePermission() {
@@ -185,20 +190,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     @SuppressLint("RestrictedApi")
     private void test() {
-//        Map<String, Object> childUpdates = new HashMap<>();
-//
-//        // Thêm các object cần sửa kèm thông tin child
-//        // vd: Post/Key
-//        //childUpdates.put("key", <object_cua_ban>);
-//
-//        Service service=new Service("1","ABC","12733");
-//
-//        childUpdates.put("Service/1",service);
-//
-//        // cập nhập lại
-//        FirebaseDatabase.getInstance().getReference().updateChildren(childUpdates);
-
-        Intent intent = new Intent(LoginActivity.this, ButtomNavigationHomeManagement.class);
+        Intent intent = new Intent(LoginActivity.this, ButtonNavigationHomeManagement.class);
         startActivity(intent);
         finish();
     }
@@ -220,5 +212,23 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         editor.putString("permission", permission);
 
         editor.commit();
+    }
+
+    private void showProgressDialog() {
+        dialog.setMessage("Loading...");
+        dialog.show();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                dialog.dismiss();
+            }
+
+        }).start();
     }
 }

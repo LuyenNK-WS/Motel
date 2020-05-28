@@ -24,7 +24,6 @@ import com.luyennk.motel.R;
 import java.util.ArrayList;
 
 public class BillActivity extends Activity implements View.OnClickListener {
-
     private static final String TAG="BillActivity";
 
     private ImageView btnBack;
@@ -58,7 +57,7 @@ public class BillActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnBack:
-                Intent intent = new Intent(BillActivity.this, ButtomNavigationHomeManagement.class);
+                Intent intent = new Intent(BillActivity.this, ButtonNavigationHomeManagement.class);
                 startActivity(intent);
                 finish();
                 break;

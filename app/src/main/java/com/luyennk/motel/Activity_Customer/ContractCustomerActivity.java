@@ -62,7 +62,7 @@ public class ContractCustomerActivity extends Activity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnBack:
-                Intent intent=new Intent(this, ButtomNavigationHomeCustomer.class);
+                Intent intent=new Intent(this, ButtonNavigationHomeCustomer.class);
                 startActivity(intent);
                 finish();
                 break;
